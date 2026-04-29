@@ -18,7 +18,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("From Data:", fromData);
     showSnackbar({
       message: "Your message has been sent successfully!",
     });

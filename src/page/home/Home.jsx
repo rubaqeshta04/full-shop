@@ -32,7 +32,6 @@ function Home() {
         );
 
         const productsData = Object.assign({}, ...results);
-        console.log("RESULTS:", productsData);
 
         setProducts(productsData);
       } catch (error) {

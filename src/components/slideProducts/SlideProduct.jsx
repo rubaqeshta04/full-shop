@@ -2,6 +2,7 @@ import React from "react";
 import Product from "./Product";
 import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
+import "./SlideProduct.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
