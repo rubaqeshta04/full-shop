@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./Product";
 import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
-import "./SlideProduct.css";
+import "./slideProduct.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import "./SlideProduct.css";
+import "./slideProduct.css";
 
 function SlideProduct({ title, data }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
