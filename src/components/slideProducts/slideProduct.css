@@ -1,0 +1,81 @@
+.slide-product-container .swiper {
+  padding: 20px 5px !important;
+}
+
+.slide-product-container .swiper-button-next,
+.slide-product-container .swiper-button-prev {
+  background: var(--white_color, #fff);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--main_color) !important;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border_color);
+}
+
+.slide-product-container .swiper-button-next:after,
+.slide-product-container .swiper-button-prev:after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.slide-product-container .swiper-button-next:hover,
+.slide-product-container .swiper-button-prev:hover {
+  background: var(--main_color);
+  color: #fff !important;
+  border-color: var(--main_color);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .slide-product-container .swiper-button-next,
+  .slide-product-container .swiper-button-prev {
+    display: flex !important;
+    width: 30px !important;
+    height: 30px !important;
+    top: 40% !important;
+  }
+  .slide-product-container .swiper-button-next:after,
+  .slide-product-container .swiper-button-prev:after {
+    font-size: 14px !important;
+  }
+  .slide-product-container .swiper-pagination {
+    display: none !important;
+  }
+}
+
+.slide-product-container .swiper-button-disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.slide-product-container .swiper-pagination-bullet {
+  background: var(--main_color) !important;
+  opacity: 0.3;
+}
+
+.slide-product-container .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.section-title-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  border-bottom: 2px solid var(--border_color);
+}
+
+.section-title-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: var(--main_color);
+}

@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  margin-top: 30px;
+}
+.swiper-slide .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  z-index: 10;
+}
+
+.hero .swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide img {
+    height: 250px;
+  }
+}
+
+.swiper-slide .content h4 {
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 0.4vw;
+}
+.swiper-slide .content h3 {
+  font-size: 3vw;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  color: var(--main_color);
+  font-weight: bolder;
+  line-height: 1.1;
+}
+.swiper-slide .content p {
+  font-size: 1.1vw;
+  margin-top: 2.5vw;
+  margin-bottom: 2.5vw;
+}
+
+@media (max-width: 1024px) {
+  .swiper-slide .content h4 {
+    font-size: 1.5vw;
+  }
+  .swiper-slide .content h3 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
+  .swiper-slide .content p {
+    font-size: 1.5vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 40px;
+  }
+  .swiper-slide .content {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+  }
+  .swiper-slide .content h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .swiper-slide .content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  .swiper-slide .content p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .swiper-slide .content .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide .content h4 {
+    font-size: 12px;
+  }
+  .swiper-slide .content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .swiper-slide .content p {
+    font-size: 11px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  .swiper-slide .content .btn {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
