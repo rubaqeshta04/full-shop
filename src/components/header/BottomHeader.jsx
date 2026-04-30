@@ -89,7 +89,7 @@ export default function BottomHeader() {
   };
 
   return (
-    <div className="bg-(--main_color) text-white relative">
+    <div className="bg-[var(--main_color)] text-white relative">
       <Container
         maxWidth="xl"
         className="py-2 md:py-3 flex flex-row justify-between items-center w-full gap-4"
@@ -101,15 +101,14 @@ export default function BottomHeader() {
           onMouseLeave={handleMouseLeave}
           ref={dropdownRef}
         >
-        
           <span className="text-sm md:text-xl !text-white font-medium whitespace-nowrap">
             Browse Category
           </span>
 
-          <ArrowDropDownSharpIcon className="!text-white hidden sm:block" />
+          <ArrowDropDownSharpIcon className="text-white! hidden sm:block" />
 
           <div
-            className={`absolute top-full left-0 w-64 bg-white text-black flex-col shadow-2xl rounded-md z-[60] max-h-80 overflow-y-auto py-2 transition-all ${
+            className={`absolute top-full left-0 mt-2 w-64 bg-white text-black flex-col shadow-2xl rounded-md z-[100] max-h-80 overflow-y-auto py-2 transition-all ${
               isCategoriesOpen
                 ? "flex opacity-100 visible"
                 : "hidden opacity-0 invisible"
@@ -150,10 +149,18 @@ export default function BottomHeader() {
             ))}
           </div>
           <div className="flex items-center gap-2 md:gap-4">
-                        <Link to="/signin" aria-label="Sign in" className="hidden md:inline-flex text-white">
+            <Link
+              to="/signin"
+              aria-label="Sign in"
+              className="hidden md:inline-flex text-white"
+            >
               <LoginSharpIcon />
             </Link>
-            <Link to="/signup" aria-label="Sign up" className="hidden md:inline-flex text-white">
+            <Link
+              to="/signup"
+              aria-label="Sign up"
+              className="hidden md:inline-flex text-white"
+            >
               <PersonAddAltSharpIcon />
             </Link>
             <button
@@ -202,7 +209,7 @@ export default function BottomHeader() {
             </Link>
             <Link
               to="/signup"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-4 text-sm font-bold !text-(--main_color) shadow-lg transition-all active:scale-[0.98] hover:bg-gray-50 border border-transparent"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--main_color)] px-4 py-4 text-sm font-bold text-white shadow-lg transition-all active:scale-[0.98] hover:bg-[var(--main_color)]/90 border border-transparent"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <PersonAddAltSharpIcon fontSize="small" />
