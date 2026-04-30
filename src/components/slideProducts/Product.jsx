@@ -10,8 +10,6 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import CheckIcon from "@mui/icons-material/Check";
 
-// Context
-
 function Product({ item }) {
   const {
     cartItems = [],
@@ -60,7 +58,6 @@ function Product({ item }) {
       } w-full group bg-(--surface_color) overflow-hidden relative py-1 px-1 md:py-5 md:px-4 border border-solid border-(--border_color) transition duration-300 hover:border-(--main_color) hover:shadow-lg rounded-lg shadow-sm`}
     >
       <Link to={`/products/${item.id}`} className="block relative">
-        {/* check */}
         <span
           className={`${
             isInCart
@@ -77,6 +74,9 @@ function Product({ item }) {
             src={item.images[0]}
             className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
             alt={item.title}
+            loading="lazy"
+            width="150"
+            height="150"
           />
         </div>
 
@@ -98,6 +98,8 @@ function Product({ item }) {
       {/* icons */}
       <div className="gap-1.5 md:gap-2 absolute top-1/2 -translate-y-1/2 flex flex-col right-1 md:right-2 opacity-100 translate-x-0 md:opacity-0 md:translate-x-10 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 z-20">
         <span
+          role="button"
+          aria-label={isInCart ? "Remove from cart" : "Add to cart"}
           onClick={handleCartToggle}
           className={`w-7 h-7 md:w-10 md:h-10 flex items-center justify-center rounded-full transition
               ${isInCart
@@ -109,6 +111,8 @@ function Product({ item }) {
         </span>
 
         <span
+          role="button"
+          aria-label={isInFavorites ? "Remove from favorites" : "Add to favorites"}
           className={`w-7 h-7 md:w-10 md:h-10 flex items-center justify-center rounded-full transition
               ${isInFavorites
               ? "bg-(--main_color) text-white opacity-80 cursor-pointer"
@@ -119,7 +123,11 @@ function Product({ item }) {
           <FavoriteBorderOutlinedIcon className="scale-75 md:scale-100" />
         </span>
 
-        <span className="w-7 h-7 md:w-10 md:h-10 bg-(--bg_color) flex items-center justify-center rounded-full cursor-pointer hover:bg-(--main_color) hover:text-white transition">
+        <span
+          role="button"
+          aria-label="Share product"
+          className="w-7 h-7 md:w-10 md:h-10 bg-(--bg_color) flex items-center justify-center rounded-full cursor-pointer hover:bg-(--main_color) hover:text-white transition"
+        >
           <ReplyRoundedIcon className="scale-75 md:scale-100" />
         </span>
       </div>
@@ -128,3 +136,4 @@ function Product({ item }) {
 }
 
 export default Product;
+

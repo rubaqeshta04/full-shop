@@ -5,7 +5,7 @@ import PageTransition from "../components/PageTransition";
 import Skeleton from "@mui/material/Skeleton";
 import { Container } from "@mui/material";
 import Product from "../components/slideProducts/Product";
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export default function SearchResults() {
   const [results, setResults] = useState([]);
@@ -69,7 +69,8 @@ export default function SearchResults() {
               No Results Found
             </h2>
             <p className="max-w-xl text-gray-500">
-              We couldn’t find any products matching your search. Try another term or check the spelling.
+              We couldn’t find any products matching your search. Try another
+              term or check the spelling.
             </p>
           </div>
         )}

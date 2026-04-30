@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import banner from "../assets/banner_Hero1.jpg";
-import banner2 from "../assets/banner_Hero2.jpg";
-import banner3 from "../assets/banner_Hero3.jpg";
+import banner from "../assets/banner_Hero1.webp";
+import banner2 from "../assets/banner_Hero2.webp";
+import banner3 from "../assets/banner_Hero3.webp";
 
 // MUI
 import { Container } from "@mui/material";
@@ -37,7 +37,14 @@ function HeroSider() {
                   Shop Now
                 </Link>
               </div>
-              <img src={banner} alt="slider hero 1" />
+              <img
+                src={banner}
+                alt="slider hero 1"
+                width="800"
+                height="500"
+                loading="eager"
+                fetchpriority="high"
+              />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
@@ -50,7 +57,13 @@ function HeroSider() {
                   Shop Now
                 </Link>
               </div>
-              <img src={banner2} alt="slider hero 2" />
+              <img
+                src={banner2}
+                alt="slider hero 2"
+                width="800"
+                height="500"
+                loading="lazy"
+              />
             </SwiperSlide>
             <SwiperSlide>
               <div className="content">
@@ -63,7 +76,13 @@ function HeroSider() {
                   Shop Now
                 </Link>
               </div>
-              <img src={banner3} alt="slider hero 3" />
+              <img
+                src={banner3}
+                alt="slider hero 3"
+                width="800"
+                height="500"
+                loading="lazy"
+              />
             </SwiperSlide>
           </Swiper>
         </Container>
@@ -73,3 +92,4 @@ function HeroSider() {
 }
 
 export default HeroSider;
+

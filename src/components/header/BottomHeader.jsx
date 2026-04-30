@@ -94,7 +94,6 @@ export default function BottomHeader() {
         maxWidth="xl"
         className="py-2 md:py-3 flex flex-row justify-between items-center w-full gap-4"
       >
-        {/* Left Side: Browse Category */}
         <div
           className="relative flex items-center gap-2 cursor-pointer group text-white shrink-0"
           onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
@@ -102,8 +101,7 @@ export default function BottomHeader() {
           onMouseLeave={handleMouseLeave}
           ref={dropdownRef}
         >
-          <MenuSharpIcon fontSize="small" className="md:text-base" />
-
+        
           <span className="text-sm md:text-xl !text-white font-medium whitespace-nowrap">
             Browse Category
           </span>
@@ -151,15 +149,13 @@ export default function BottomHeader() {
               </li>
             ))}
           </div>
-          {/* Login / Signup Icons on right */}
           <div className="flex items-center gap-2 md:gap-4">
-            <Link to="/signin" className="hidden md:inline-flex text-white">
+                        <Link to="/signin" aria-label="Sign in" className="hidden md:inline-flex text-white">
               <LoginSharpIcon />
             </Link>
-            <Link to="/signup" className="hidden md:inline-flex text-white">
+            <Link to="/signup" aria-label="Sign up" className="hidden md:inline-flex text-white">
               <PersonAddAltSharpIcon />
             </Link>
-            {/* Hamburger Toggle (Hidden on desktop) */}
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md p-1.5 text-white transition-all hover:bg-white/10 md:hidden"
@@ -172,7 +168,6 @@ export default function BottomHeader() {
         </div>
       </Container>
 
-      {/* Menu Drawer (Mobile only) */}
       <div
         className={`md:hidden absolute top-full left-0 w-full z-50 bg-(--main_color) border-t border-white/10 transition-all duration-300 shadow-xl overflow-hidden ${
           isMobileMenuOpen
