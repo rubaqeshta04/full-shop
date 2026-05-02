@@ -188,7 +188,7 @@ const Footer = () => {
         </div>
         <div className="pt-8 border-t border-white/10 flex flex-col items-center justify-center gap-4 text-center">
           <p className="text-sm text-gray-300">
-            &copy; {currentYear} Roxana. All rights reserved.
+            &copy; {currentYear} NEXORA. All rights reserved.
           </p>
         </div>
       </div>
